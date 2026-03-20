@@ -1,5 +1,5 @@
 resource "aws_secretsmanager_secret" "db_credentials" {
-  name = "shopeasy-db-credentials-v2"
+  name = "shopeasy-db-credentials-v2-416bef"
   recovery_window_in_days = 0
 }
 
