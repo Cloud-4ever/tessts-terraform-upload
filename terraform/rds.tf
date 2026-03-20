@@ -1,6 +1,6 @@
 # 1. DB 서브넷 그룹 (Private DB 서브넷 2개 묶기)
 resource "aws_db_subnet_group" "main" {
-  name       = "shopeasy-db-subnet-group-416bef"
+  name       = "shopeasy-db-subnet-group-c71bf2"
   subnet_ids = [aws_subnet.private_db_a.id, aws_subnet.private_db_c.id]
 
   tags = {
@@ -20,7 +20,7 @@ resource "aws_kms_key" "rds" {
 
 # 3. RDS 인스턴스 (MySQL)
 resource "aws_db_instance" "main" {
-  identifier             = "shopeasy-rds-416bef"
+  identifier             = "shopeasy-rds-c71bf2"
   engine                 = "mysql"
   engine_version         = "8.0"
   instance_class         = "db.t3.micro"

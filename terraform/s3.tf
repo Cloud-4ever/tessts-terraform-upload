@@ -1,9 +1,9 @@
 resource "aws_s3_bucket" "images" {
-  bucket = "shopeasy-image-bucket-c4-easyshop-review-image-416bef"
+  bucket = "shopeasy-image-bucket-c4-easyshop-review-image-c71bf2"
 }
 
 resource "aws_s3_bucket" "static_assets" {
-  bucket = "shopeasy-static-bucket-c4-easyshop-assets-416bef"
+  bucket = "shopeasy-static-bucket-c4-easyshop-assets-c71bf2"
 }
 
 resource "aws_s3_bucket_public_access_block" "images" {

@@ -2,7 +2,7 @@
 # 0. ALB Access Log 저장용 S3 버킷
 # ================================
 resource "aws_s3_bucket" "alb_logs" {
-  bucket = "shopeasy-alb-logs-1234567890-416bef"
+  bucket = "shopeasy-alb-logs-1234567890-c71bf2"
   force_destroy = true
 
   tags = {
@@ -52,7 +52,7 @@ resource "aws_s3_bucket_policy" "alb_logs" {
 # 2. ALB (Application Load Balancer)
 # ================================
 resource "aws_lb" "main" {
-  name               = "shopeasy-alb-416bef"
+  name               = "shopeasy-alb-c71bf2"
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.alb.id]
@@ -77,7 +77,7 @@ resource "aws_lb" "main" {
 # 3. 타겟 그룹
 # ================================
 resource "aws_lb_target_group" "app" {
-  name     = "shopeasy-tg-416bef"
+  name     = "shopeasy-tg-c71bf2"
   port     = 8080
   protocol = "HTTP"
   vpc_id   = aws_vpc.main.id
