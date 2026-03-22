@@ -1,5 +1,5 @@
 resource "aws_iam_role" "ec2_app_role" {
-  name = "shopeasy-ec2-app-role-2720d6"
+  name = "shopeasy-ec2-app-role-c46f66"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
@@ -14,6 +14,6 @@ resource "aws_iam_role" "ec2_app_role" {
 }
 
 resource "aws_iam_instance_profile" "ec2_app_profile" {
-  name = "shopeasy-ec2-app-profile-2720d6"
+  name = "shopeasy-ec2-app-profile-c46f66"
   role = aws_iam_role.ec2_app_role.name
 }
